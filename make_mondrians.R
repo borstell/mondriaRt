@@ -19,6 +19,22 @@ single <- ggplot(read.csv(paste0("./canvas/mondrian_canvas_20200426-213712.csv")
 single + annotate("text", x = 2, y=3.5, label= "mondriaRt", size=16)
 ggsave("./images/mondriaRt.png", dpi = 1200, width = 280, height = 84, units = "mm")
 
+
+x_raster_size <- 5
+y_raster_size <- 5
+
+ggplot(read.csv(paste0("./canvas/mondrian_canvas_9.csv"))) +
+  geom_rect(aes(xmin=0, xmax=x_raster_size, ymin=0, ymax=y_raster_size, fill="white"), color="black", size=2) +
+  geom_rect(aes(xmin = x1, xmax = x2+1, ymin = y1, ymax = y2+1, fill=color), color="black", size=2) +
+  scale_fill_identity() + scale_color_identity() + 
+  xlim(0,x_raster_size) + ylim(0,y_raster_size) + 
+  #coord_flip() +
+  coord_fixed() + 
+  theme_void() +
+  theme(legend.position = "none")
+ggsave(paste0("./images/mondrian_tiny_", format(Sys.time(),"%Y-%m-%d_%H%M%S"),".png"), dpi = 1200, width = 8, height = 8, units = "in")
+
+
 # If multiple files
 
 num <- 12 # number of rasters to read

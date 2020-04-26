@@ -20,7 +20,7 @@ def main():
 	
 	For example:
 	
-		python3 9 5 5 1
+		python3 make_mondrians.py 9 5 5 1
 	
 	... this gives 9 paintings, each as a 5x5 grid, and a random starting point.
 	""")
