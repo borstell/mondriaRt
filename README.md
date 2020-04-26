@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/borstell/mondriaRt/master/mondriaRt.png" width="1200">
+<img src="https://raw.githubusercontent.com/borstell/mondriaRt/master/mondriaRt.png" width="1400">
 
 # mondriaRt
 Make Mondria(a)n-style artwork with Python and R/ggplot2
